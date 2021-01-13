@@ -62,8 +62,6 @@ class Person
         else
             return "blah blah blah blah blah"
         end
-
-        
     end
 end
 
