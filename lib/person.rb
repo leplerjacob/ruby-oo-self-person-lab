@@ -12,34 +12,20 @@ class Person
         @hygiene = hygiene
     end
 
-    def hygiene=(point)
-        if point > 10
-            @hygiene = 10
-        elsif point < 0
-            @hygiene = 0
-        else
-            @hygiene = point
-        end
-        @hygiene
+    def hygiene=(points)
+        @hygiene = points > 10 ? 10 : (points < 0 ? 0 : points)
     end
 
-    def happiness=(point)
-        if point > 10
-            @happiness = 10
-        elsif point < 0
-            @happiness = 0
-        else
-            @happiness = point
-        end
-        @happiness
+    def happiness=(points)
+        @happiness = points > 10 ? 10 : (points < 0 ? 0 : points)
     end
 
     def happy?
-        return @happiness > 7 ? true : false
+        @happiness > 7 ? true : false
     end
 
     def clean?
-        return @hygiene > 7 ? true : false        
+        @hygiene > 7 ? true : false        
     end
 
     def get_paid(salary)
@@ -50,6 +36,18 @@ class Person
     def take_bath
         self.hygiene=@hygiene += 4
         "♪ Rub-a-dub just relaxing in the tub ♫"
+    end
+
+    def work_out
+        
+    end
+
+    def call_friend
+    
+    end
+
+    def start_conversation
+    
     end
 
 end
